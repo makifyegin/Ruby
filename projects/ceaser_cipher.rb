@@ -1,5 +1,9 @@
 # Create an empty array to store the encrypted message
+puts 'Enter a phrase to cipher'
+encrypt = gets.chomp
 
+puts "\nEnter a shift number"
+number = gets.chomp.to_i
 
 # Create a method that takes a string and a number as arguments
 def ceaser_cipher(encrypt, number)
@@ -8,7 +12,7 @@ if is_a_char?(encrypt)
     number = number % 26
     # split the string into an array of characters
    encrypt = encrypt.split("")
-   
+
    new_array = []
    encrypt.each do |letter|
     #  check if the letter is a letter
@@ -52,4 +56,4 @@ def is_a_char?(string)
 end
 
 
-p ceaser_cipher("abc1234",150) # => "mjqqt"
+puts ceaser_cipher(encrypt,number) # => "mjqqt"
